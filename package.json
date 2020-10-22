@@ -1,0 +1,23 @@
+{
+  "name": "captains_log_lab",
+  "version": "1.0.0",
+  "description": "![Insert Pun Image here](https://i.imgflip.com/2174sq.jpg)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.generalassemb.ly:prudential-0921/captains_log_lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.10.9"
+  }
+}
