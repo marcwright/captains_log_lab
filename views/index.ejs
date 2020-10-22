@@ -1,0 +1,7 @@
+<h1>All Logs</h1>
+
+<ul>
+  <% logs.forEach(log => { %>
+  <li><a href="logs/<%= log._id %>"><%= log.title %></a></li>
+  <% }) %>
+</ul>

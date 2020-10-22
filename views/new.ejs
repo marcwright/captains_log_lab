@@ -1,9 +1,24 @@
-<form action="/logs" method="POST">
-  <label for="title">Title</label>
-  <input type="text" name="title" placeholder="title" />
-  <label for="entry">Entry</label>
-  <input type="textarea" name="entry" placeholder="entry" />
-  <label for="shipIsBroken">Ship Is Broken?</label>
-  <input type="checkbox" name="shipIsBroken" />
-  <input type="submit" value="submit" />
+<h1>Create a Log</h1>
+<form method="POST" action="/logs">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      aria-describedby="emailHelp"
+      name="title"
+    />
+  </div>
+  <div class="form-group">
+    <label for="entry">Entry</label>
+    <textarea type="text" class="form-control" rows="3" id="entry" name="entry" /></textarea>
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="shipIsBroken" />
+    <label class="form-check-label" for="shipIsBroken" name="shipIsBroken"
+      >Ship Is Broken?</label
+    >
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>

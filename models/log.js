@@ -9,5 +9,5 @@ const logSchema = mongoose.Schema(
   { timestamps: true }
 );
 
-const Log = moongoose.model('Log', logSchema);
+const Log = mongoose.model('Log', logSchema);
 module.exports = Log;
