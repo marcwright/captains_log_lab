@@ -1,6 +1,3 @@
-
-[![General Assembly Logo](/ga_cog.png)](https://generalassemb.ly)
-
 # The Captain's Log
 
 ![Insert Pun Image here](https://i.imgflip.com/2174sq.jpg)
