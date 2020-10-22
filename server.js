@@ -3,8 +3,15 @@ const app = express();
 const PORT = 3000;
 const methodOverride = require('method-override');
 
+app.use(express.urlencoded({ extended: false }));
+
 app.get('/logs/new', (req, res) => {
   res.render('new.ejs');
+});
+
+app.post('/logs', (req, res) => {
+  req.body.shipIsBroken = req.body.shipIsBroken === 'on' ? true : false;
+  res.send(req.body);
 });
 
 app.listen(PORT, () => {
