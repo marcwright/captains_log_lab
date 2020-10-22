@@ -47,9 +47,8 @@ Index, New and Create has been completed for you.
 |6| Update |||||
 |7| Destroy ||||||
 
-1. In your `student_labs` folder
-1. `mkdir captains_log`
-1. `cd catpains_log`
+1. Fork and clone this repo into your `labs` folder
+1. `cd captains_log`
 1. create a new express app
 
 ### New
