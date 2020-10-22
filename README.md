@@ -42,13 +42,13 @@ Index, New and Create has been completed for you.
 |1| Index | /logs/ | GET | index.ejs | Log.find()|
 |2| Show |||||
 |3| New | /logs/new | GET | new.ejs | none |
-|4| Create | /logs/ | POS T| none | Log.create(req.body)|
+|4| Create | /logs/ | POST| none | Log.create(req.body)|
 |5| Edit |||||
 |6| Update |||||
 |7| Destroy ||||||
 
 1. Fork and clone this repo into your `labs` folder
-1. `cd captains_log`
+1. `cd captains_log_lab`
 1. create a new express app
 
 ### New
@@ -79,10 +79,10 @@ Index, New and Create has been completed for you.
 ### Mongo
 1. install mongoose and configure it in your `server.js`
 
-### Logs Model
+### Log Model
 1. `mkdir models`
-1. `touch models/logs.js`
-1. Create the logs schema
+1. `touch models/log.js`
+1. Create the log schema
   - title: string
   - entry: string
   - shipIsBroken: Boolean (bonus: set a default to true)
