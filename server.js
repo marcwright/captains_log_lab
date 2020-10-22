@@ -1,13 +1,18 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const methodOverride = require('method-override');
 const expressLayouts = require('express-ejs-layouts');
 const Log = require('./models/log');
 const seeds = require('./models/seeds');
+const dayjs = require('dayjs');
 
-mongoose.connect('mongodb://localhost:27017/captainslog', {
+// How to connect to the database either via heroku or locally
+const MONGODB_URI =
+  process.env.MONGODB_URI || 'mongodb://localhost:27017/captainslog';
+
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -18,6 +23,7 @@ mongoose.connection.once('open', () => {
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static('public'));
 
 // SEEDS
 app.get('/logs/seed', (rea, res) => {
@@ -43,8 +49,9 @@ app.get('/logs/new', (req, res) => {
 // SHOW
 app.get('/logs/:id', (req, res) => {
   Log.findById(req.params.id, (err, log) => {
+    let now = dayjs();
     if (err) res.send(err);
-    res.render('show.ejs', { log });
+    res.render('show.ejs', { log, now });
   });
 });
 

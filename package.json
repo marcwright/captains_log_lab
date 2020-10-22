@@ -1,6 +1,9 @@
 {
   "name": "captains_log_lab",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.7.0"
+  },
   "description": "![Insert Pun Image here](https://i.imgflip.com/2174sq.jpg)",
   "main": "server.js",
   "scripts": {
@@ -15,6 +18,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dayjs": "^1.9.3",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
